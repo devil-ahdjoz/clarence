@@ -48,6 +48,9 @@ ul li a:hover::after{
     display: flex;
     margin-top: 80px;
 }
+.left-column, .right-column{
+    flex-basis: 50%;
+}
 .right-column img{
     width: 80%;
     margin: -80px 100px;
@@ -134,7 +137,7 @@ ul li a:hover::after{
 }
 @media only screen and (max-width: 620px) {
     /* For mobile phones: */
-    .left-column, .right-column{
+    .left-column, .right-column {
       width: 100%;
     }
   }
