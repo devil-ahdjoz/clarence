@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    width: 90%;
+    margin: auto;
+}
+.navbar{
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+}
+ul{
+    flex: 1;
+    text-align: right;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 25px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+    position: relative;
+}
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 10px;
+    background: #ea7070;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    transition: 0.5s;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+.banner{
+    display: flex;
+    margin-top: 80px;
+}
+.left-column, .right-column{
+    flex-basis: 50%;
+}
+.right-column img{
+    width: 80%;
+    margin: -80px 100px;
+}
+.left-column h1{
+    font-size: 90px;
+    color: #ff9e80;
+}
+.left-column h1 span{
+    color: #ff8a80;
+}
+.left-column h5{
+    font-size: 15px;
+    margin: -20px 80px;
+}
+.left-column h6{
+    font-size: 15px;
+    color: #ea7070;
+    margin-top: 30px;
+}
+.left-column p{
+    font-size: 25px;
+    margin: 50px auto;
+}
+.btn{
+    margin-top: -40px;
+}
+.btn .primary{
+    background: linear-gradient(#ff9e80, #ff8a80);
+    box-shadow: 0 2px 15px #ea7070;
+    color: #fff;
+}
+.btn button{
+    padding: 7px 30px;
+    margin-right: 15px;
+    outline: none;
+    border: 1px solid #ea7070;
+    border-radius: 20px;
+    cursor: pointer;
+    color:  #ea7070;
+    background: transparent;
+    font-size: 20px;
+}
+.img-gallery{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 30px;
+}
+.img-gallery img{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.img-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px #ea7070;
+}
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none ;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.full-img img{
+    width: 90%;
+    max-width: 500px;
+}
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
